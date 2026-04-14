@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Evalia AI — Intelligent Tutor Evaluation System
 
-## Getting Started
+Evalia AI is an AI-powered interview simulation platform that evaluates a candidate’s teaching ability through adaptive questioning and structured feedback.
 
-First, run the development server:
+🔗 **Live Demo:** [https://your-vercel-link.vercel.app](https://evalia-ai.vercel.app/)
+
+---
+
+## 🧠 Key Features
+
+- 🤖 Adaptive AI Interviewer
+- 🎯 Dynamic follow-up questions based on answers
+- 🧠 Intelligent evaluation (clarity, simplicity, fluency, warmth)
+- 📊 Recruiter-style dashboard
+- 📈 Candidate history tracking
+- 🛡️ Fallback system for API failures
+
+---
+
+## 💡 Problem Statement
+
+Traditional assessments focus on correct answers, but teaching ability requires:
+
+- Clear explanation  
+- Simplicity  
+- Engagement  
+- Communication  
+
+Evalia AI simulates a real interview environment to evaluate these skills.
+
+---
+
+## ⚙️ How It Works
+
+1. User answers questions
+2. AI dynamically generates follow-up questions
+3. System evaluates responses across:
+   - Clarity
+   - Warmth
+   - Simplicity
+   - Fluency
+4. Results are displayed in a structured dashboard
+
+---
+
+## 🛠 Tech Stack
+
+- Next.js (App Router)
+- React + Tailwind CSS
+- OpenAI API
+- LocalStorage (history tracking)
+
+---
+
+## 🔐 Environment Variables
+
+Create `.env.local`:
+
+---
+
+## 🚀 Run Locally
 
 ```bash
+git clone https://github.com/yourusername/evalia-ai.git
+cd evalia-ai
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

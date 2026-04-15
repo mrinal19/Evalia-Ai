@@ -9,11 +9,13 @@ export async function POST(req: Request) {
   const { answers } = await req.json();
 
   // 🧠 STEP 1 — HARD LOGIC (detect weak answers)
-  const hasNoAnswer = answers.some((ans: string) =>
-    ans.toLowerCase().includes("don't know") ||
-    ans.toLowerCase().includes("do not know") ||
-    ans.toLowerCase().includes("no idea")
-  );
+  const lastAnswer = answers[answers.length - 1] || "";
+
+const hasNoAnswer =
+  lastAnswer.toLowerCase().includes("don't know") ||
+  lastAnswer.toLowerCase().includes("do not know") ||
+  lastAnswer.toLowerCase().includes("no idea") ||
+  lastAnswer.trim().length < 5;
 
   if (hasNoAnswer) {
     return NextResponse.json({
@@ -35,7 +37,7 @@ You are a strict and experienced tutor evaluator.
 
 Evaluate the answers honestly.
 
-DO NOT be polite.
+Be realistic and fair. Reward clear explanations with higher scores.
 DO NOT inflate scores.
 
 Rules:
